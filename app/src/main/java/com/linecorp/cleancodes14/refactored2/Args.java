@@ -89,7 +89,7 @@ public class Args {
         if (m == null)
             return false;
         try {
-            m.set(currentArgument);
+            m.set(currentArgument.next());
             return true;
         } catch (ArgsException e) {
             e.setErrorArgumentId(argChar);
