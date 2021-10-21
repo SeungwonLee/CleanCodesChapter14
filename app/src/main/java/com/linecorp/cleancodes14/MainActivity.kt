@@ -13,11 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         try {
             val schema = "l,p#,d*"
-            val args = arrayOfNulls<String>(4)
-            args[0] = "-p"
-            args[1] = "10"
-            args[2] = "-d"
-            args[3] = "Hi"
+            val args = arrayOf("-p", "10", "-d", "Hi", "-l", "true")
             val arg = Args(schema, args)
             val logging = arg.getBoolean('l')
             val port = arg.getInt('p')
